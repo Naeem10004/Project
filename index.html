@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Webpage</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="logo.png" alt="" />
+          <h1>healthCare | ABC > Admin</h1>
+        </div>
+        <div class="nav-icons">
+          <a href="index.html"><i class="fa fa-home"></i></a>
+          <a href="#"><i class="fa fa-search"></i></a>
+          <a href="#"><i class="fa fa-user"></i></a>
+          <a href="#"><i class="fa fa-shopping-cart"></i></a>
+        </div>
+      </nav>
+    </header>
+    <div id="delete-confirmation-modal" class="modal">
+      <div class="modal-content">
+        <h2>Are you sure?</h2>
+        <p>This action cannot be undone.</p>
+        <div>
+          <button id="delete-confirmation-modal-confirm-button">Yes</button>
+          <button id="delete-confirmation-modal-cancel-button">No</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-container">
+      <div class="sidebar">
+        <a href="#"><i class="fa fa-envelope"></i></a>
+        <a href="#"><i class="fa fa-bell"></i></a>
+        <a href="#"><i class="fa fa-calendar"></i></a>
+        <a href="#"><i class="fa fa-tasks"></i></a>
+        <a href="#"><i class="fa fa-cog"></i></a>
+        <a href="#"><i class="fa fa-power-off"></i></a>
+      </div>
+      <div class="card-container">
+        <!-- <div class="card" id="left-card">
+          <h2>Card 1</h2>
+          <ul id="card1-list"></ul>
+        </div> -->
+        <div class="card" id="left-card">
+          <h2>Manage Users</h2>
+          <table id="card1-table">
+            <thead>
+              <tr>
+                <th>firstName</th>
+                <th>lastName</th>
+                <th>email</th>
+                <th>Edit</th>
+                <th>delete</th>
+              </tr>
+            </thead>
+            <tbody id="card1-body"></tbody>
+          </table>
+        </div>
+
+        <div class="card" id="right-card">
+          <h2>Add new user</h2>
+          <form id="my-form">
+            <label for="first-name-input">First Name:</label>
+            <input
+              type="text"
+              id="first-name-input"
+              name="fname"
+              required
+            /><br /><br />
+            <label for="last-name-input">Last Name:</label>
+            <input
+              type="text"
+              id="last-name-input"
+              name="lname"
+              required
+            /><br /><br />
+            <label for="email-input">Email:</label>
+            <input
+              type="email"
+              id="email-input"
+              name="email"
+              required
+            /><br /><br />
+            <button type="submit" id="save-button">Save</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
